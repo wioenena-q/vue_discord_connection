@@ -21,7 +21,7 @@ AuthRouter.get("/me", isAuthenticated, (req, res) => {
 AuthRouter.get("/logout", isAuthenticated, (req, res) => {
   req.session.destroy(() => {
     req.logOut(() => {
-      res.clearCookie("wotify_dashboard_connection");
+      res.clearCookie("connection.sid");
       res.redirect("/");
     });
   });

@@ -16,7 +16,6 @@ const PORT = process.env.PORT ?? 3000;
 // Setup
 app.use(
   session({
-    name: "wotify_dashboard_connection",
     resave: false,
     saveUninitialized: false,
     secret: process.env.SESSION_SECRET,
